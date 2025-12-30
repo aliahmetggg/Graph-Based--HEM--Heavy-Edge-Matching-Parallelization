@@ -1,0 +1,350 @@
+{
+  "scalability": [
+    {
+      "size": 500,
+      "nnz": 9410,
+      "time_ms": 0.2727036666575107,
+      "throughput": 34506320.04819372
+    },
+    {
+      "size": 1000,
+      "nnz": 18910,
+      "time_ms": 0.3664850000006936,
+      "throughput": 51598291.88087974
+    },
+    {
+      "size": 2000,
+      "nnz": 37910,
+      "time_ms": 0.6343726666671046,
+      "throughput": 59759825.71754431
+    },
+    {
+      "size": 5000,
+      "nnz": 94910,
+      "time_ms": 1.3465999999956086,
+      "throughput": 70481211.94141506
+    },
+    {
+      "size": 10000,
+      "nnz": 189910,
+      "time_ms": 2.4311993333299142,
+      "throughput": 78113710.13329789
+    },
+    {
+      "size": 20000,
+      "nnz": 379910,
+      "time_ms": 4.923424666666658,
+      "throughput": 77163768.25507787
+    }
+  ],
+  "operations": {
+    "small_banded": {
+      "Expand (+1)": {
+        "input_shape": [
+          500,
+          500
+        ],
+        "target_shape": [
+          501,
+          501
+        ],
+        "input_nnz": 5470,
+        "output_nnz": 5470,
+        "time_ms": 0.24873159999856398,
+        "time_std": 0.09453061413289433,
+        "similarity": 0.9999183078545305
+      },
+      "Upscale (2x)": {
+        "input_shape": [
+          500,
+          500
+        ],
+        "target_shape": [
+          1000,
+          1000
+        ],
+        "input_nnz": 5470,
+        "output_nnz": 5470,
+        "time_ms": 0.20574259999648348,
+        "time_std": 0.028551451945982555,
+        "similarity": 0.9996625777639107
+      },
+      "Reduce (-1)": {
+        "input_shape": [
+          500,
+          500
+        ],
+        "target_shape": [
+          499,
+          499
+        ],
+        "input_nnz": 5470,
+        "output_nnz": 5451,
+        "time_ms": 0.228959600002554,
+        "time_std": 0.024715809490073775,
+        "similarity": 0.9999999969847423
+      },
+      "Downscale (1/2x)": {
+        "input_shape": [
+          500,
+          500
+        ],
+        "target_shape": [
+          250,
+          250
+        ],
+        "input_nnz": 5470,
+        "output_nnz": 1738,
+        "time_ms": 0.2859515999944051,
+        "time_std": 0.06520860781731284,
+        "similarity": 0.9999356649954477
+      },
+      "Upscale (4x)": {
+        "input_shape": [
+          500,
+          500
+        ],
+        "target_shape": [
+          2000,
+          2000
+        ],
+        "input_nnz": 5470,
+        "output_nnz": 5470,
+        "time_ms": 0.22887920000016493,
+        "time_std": 0.031180982517343237,
+        "similarity": 0.9994451524239962
+      }
+    },
+    "medium_banded": {
+      "Expand (+1)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          2001,
+          2001
+        ],
+        "input_nnz": 37910,
+        "output_nnz": 37910,
+        "time_ms": 0.6444119999969189,
+        "time_std": 0.12354681341760702,
+        "similarity": 0.9999868829091528
+      },
+      "Upscale (2x)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          4000,
+          4000
+        ],
+        "input_nnz": 37910,
+        "output_nnz": 37910,
+        "time_ms": 0.6698249999885775,
+        "time_std": 0.1032673787797998,
+        "similarity": 0.9999374784650285
+      },
+      "Reduce (-1)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          1999,
+          1999
+        ],
+        "input_nnz": 37910,
+        "output_nnz": 37875,
+        "time_ms": 0.8321942000065974,
+        "time_std": 0.05802996201739081,
+        "similarity": 0.9999999999650911
+      },
+      "Downscale (1/2x)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          1000,
+          1000
+        ],
+        "input_nnz": 37910,
+        "output_nnz": 10970,
+        "time_ms": 0.8283353999956944,
+        "time_std": 0.03583180182417555,
+        "similarity": 0.9999959480328563
+      },
+      "Upscale (4x)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          8000,
+          8000
+        ],
+        "input_nnz": 37910,
+        "output_nnz": 37910,
+        "time_ms": 0.5938193999952546,
+        "time_std": 0.030436162598942756,
+        "similarity": 0.9998970006866814
+      }
+    },
+    "large_banded": {
+      "Expand (+1)": {
+        "input_shape": [
+          5000,
+          5000
+        ],
+        "target_shape": [
+          5001,
+          5001
+        ],
+        "input_nnz": 144780,
+        "output_nnz": 144780,
+        "time_ms": 2.076330800002779,
+        "time_std": 0.2634224882791095,
+        "similarity": 0.999995161487872
+      },
+      "Upscale (2x)": {
+        "input_shape": [
+          5000,
+          5000
+        ],
+        "target_shape": [
+          10000,
+          10000
+        ],
+        "input_nnz": 144780,
+        "output_nnz": 144780,
+        "time_ms": 2.1261524000010468,
+        "time_std": 0.24426816916783034,
+        "similarity": 0.9999767892437077
+      },
+      "Reduce (-1)": {
+        "input_shape": [
+          5000,
+          5000
+        ],
+        "target_shape": [
+          4999,
+          4999
+        ],
+        "input_nnz": 144780,
+        "output_nnz": 144729,
+        "time_ms": 3.0767894000007345,
+        "time_std": 0.631102118388905,
+        "similarity": 0.9999998390374001
+      },
+      "Downscale (1/2x)": {
+        "input_shape": [
+          5000,
+          5000
+        ],
+        "target_shape": [
+          2500,
+          2500
+        ],
+        "input_nnz": 144780,
+        "output_nnz": 39936,
+        "time_ms": 2.9129793999970843,
+        "time_std": 0.2358455027173439,
+        "similarity": 0.9999987337843667
+      },
+      "Upscale (4x)": {
+        "input_shape": [
+          5000,
+          5000
+        ],
+        "target_shape": [
+          20000,
+          20000
+        ],
+        "input_nnz": 144780,
+        "output_nnz": 144780,
+        "time_ms": 1.9504378000021916,
+        "time_std": 0.07682196618655679,
+        "similarity": 0.9999617189138204
+      }
+    },
+    "medium_random": {
+      "Expand (+1)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          2001,
+          2001
+        ],
+        "input_nnz": 20000,
+        "output_nnz": 20000,
+        "time_ms": 0.4757655999981125,
+        "time_std": 0.11417289503690037,
+        "similarity": 0.9999998838518663
+      },
+      "Upscale (2x)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          4000,
+          4000
+        ],
+        "input_nnz": 20000,
+        "output_nnz": 20000,
+        "time_ms": 0.4289068000048246,
+        "time_std": 0.038804691266588684,
+        "similarity": 0.9447045906526689
+      },
+      "Reduce (-1)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          1999,
+          1999
+        ],
+        "input_nnz": 20000,
+        "output_nnz": 20000,
+        "time_ms": 0.5741677999935746,
+        "time_std": 0.03449913460488131,
+        "similarity": 0.9999999934379176
+      },
+      "Downscale (1/2x)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          1000,
+          1000
+        ],
+        "input_nnz": 20000,
+        "output_nnz": 19737,
+        "time_ms": 0.7484521999970184,
+        "time_std": 0.03486055513869392,
+        "similarity": 0.9995343239900686
+      },
+      "Upscale (4x)": {
+        "input_shape": [
+          2000,
+          2000
+        ],
+        "target_shape": [
+          8000,
+          8000
+        ],
+        "input_nnz": 20000,
+        "output_nnz": 20000,
+        "time_ms": 0.420166000003519,
+        "time_std": 0.04022296571051945,
+        "similarity": 0.8033916931155315
+      }
+    }
+  }
+}
